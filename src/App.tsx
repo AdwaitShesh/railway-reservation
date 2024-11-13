@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Train as TrainIcon } from 'lucide-react';
 import SearchForm from './components/SearchForm';
 import TrainList from './components/TrainList';

@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import { stations } from '../data/stations';
 import { Calendar, MapPin, Search } from 'lucide-react';
 
