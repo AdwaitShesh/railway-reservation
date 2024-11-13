@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Seat } from '../types';
 
 interface SeatSelectionProps {
@@ -6,7 +6,7 @@ interface SeatSelectionProps {
   onSeatSelect: (seats: string[]) => void;
 }
 
-export default function SeatSelection({ trainId, onSeatSelect }: SeatSelectionProps) {
+export default function SeatSelection({ onSeatSelect }: SeatSelectionProps) {
   const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
 
   // Generate dummy seats for demonstration

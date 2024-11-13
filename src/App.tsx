@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Train as TrainIcon } from 'lucide-react';
 import SearchForm from './components/SearchForm';
 import TrainList from './components/TrainList';
@@ -13,7 +13,7 @@ function App() {
   const [selectedTrain, setSelectedTrain] = useState<Train | null>(null);
   const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
 
-  const handleSearch = (from: string, to: string, date: string) => {
+  const handleSearch = (from: string, to: string) => {
     // Simulate API call with filtered results
     const results = trains.filter(train => 
       train.from.toLowerCase() === from.toLowerCase() &&

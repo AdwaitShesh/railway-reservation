@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { CreditCard } from 'lucide-react';
 
 interface PaymentFormProps {
@@ -33,8 +33,9 @@ export default function PaymentForm({ amount, onPaymentComplete }: PaymentFormPr
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
+          <label htmlFor="card-number" className="block text-sm font-medium text-gray-700 mb-1">Card Number</label>
           <input
+            id="card-number"
             type="text"
             value={cardNumber}
             onChange={(e) => setCardNumber(e.target.value.replace(/\D/g, '').slice(0, 16))}
@@ -47,8 +48,9 @@ export default function PaymentForm({ amount, onPaymentComplete }: PaymentFormPr
 
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
+            <label htmlFor="expiry-date" className="block text-sm font-medium text-gray-700 mb-1">Expiry Date</label>
             <input
+            id="expiry-date"
               type="text"
               value={expiry}
               onChange={(e) => setExpiry(e.target.value.replace(/\D/g, '').slice(0, 4))}
@@ -60,8 +62,10 @@ export default function PaymentForm({ amount, onPaymentComplete }: PaymentFormPr
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">CVV</label>
+            <label htmlFor="cvv" className="block text-sm font-medium text-gray-700 mb-1">CVV</label>
             <input
+              id="cvv" 
+              name="cvv"
               type="password"
               value={cvv}
               onChange={(e) => setCvv(e.target.value.replace(/\D/g, '').slice(0, 3))}
@@ -74,8 +78,9 @@ export default function PaymentForm({ amount, onPaymentComplete }: PaymentFormPr
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Card Holder Name</label>
+          <label htmlFor="card-holder-name" className="block text-sm font-medium text-gray-700 mb-1">Card Holder Name</label>
           <input
+          id="card-holder-name"
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}

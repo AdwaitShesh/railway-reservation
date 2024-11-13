@@ -1,4 +1,3 @@
-import React from 'react';
 import { Train } from '../types';
 import { Clock, Train as TrainIcon } from 'lucide-react';
 
