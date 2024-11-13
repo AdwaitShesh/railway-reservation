@@ -1,25 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    "target": "ES2020",                           // Target modern ECMAScript features
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],     // Include libraries for ECMAScript and DOM
+    "module": "ESNext",                           // Use ESNext modules
+    "moduleResolution": "Bundler",                // Resolve modules suitable for a bundler
+    "jsx": "react",                         // Enable JSX syntax with React 17+ JSX transform
+    "esModuleInterop": true,                      // Enable default imports from CommonJS modules
+    "allowSyntheticDefaultImports": true,         // Allow synthetic default imports
+    "skipLibCheck": true,                         // Skip checking of declaration files
+    "useDefineForClassFields": true,              // Enable `useDefineForClassFields`
+    "allowImportingTsExtensions": true,           // Allow importing TypeScript extensions
+    "isolatedModules": true,                      // Each file is treated as a separate module
+    "moduleDetection": "force",                   // Forces module detection
+    "noEmit": true,                               // Do not emit output files
 
-    /* Bundler mode */
-    "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    /* Linting Options */
+    "strict": true,                               // Enable all strict type-checking options
+    "noUnusedLocals": true,                       // Report errors on unused local variables
+    "noUnusedParameters": true,                   // Report errors on unused function parameters
+    "noFallthroughCasesInSwitch": true,           // Report errors for fallthrough cases in switch
+    "noUncheckedSideEffectImports": true          // Disallow imports with unchecked side effects
   },
-  "include": ["src"]
+  "include": [
+    "src",                                        // Include source directory
+    "src/jest.d.ts"                               // Include Jest typings file
+, "__test__"  ]
 }

@@ -31,7 +31,7 @@ export const trains: Train[] = [
     id: "3",
     name: "Duronto Express",
     number: "12239",
-    from: "Mumbai Central",
+    from: "Ahmedabad",
     to: "Nagpur",
     departureTime: "20:15",
     arrivalTime: "07:55",

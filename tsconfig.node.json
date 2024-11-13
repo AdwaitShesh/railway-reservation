@@ -1,23 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
+    "target": "ES2022",                             // Use ECMAScript 2022 as the target
+    "lib": ["ES2023"],                              // Include ECMAScript 2023 library features
+    "module": "ESNext",                             // Use ESNext module system
+    "skipLibCheck": true,                           // Skip type checking of declaration files
+    "esModuleInterop": true,                        // Enable default imports for CommonJS modules
+    "jsx":"react",
+    /* Bundler Mode */
+    "moduleResolution": "Bundler",                  // Module resolution for bundler (Vite)
+    "allowImportingTsExtensions": true,             // Allow .ts extension in imports
+    "isolatedModules": true,                        // Treat each file as a separate module
+    "moduleDetection": "force",                     // Force module detection
+    "noEmit": true,                                 // Do not emit output files
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "strict": true,                                 // Enable all strict type-checking options
+    "noUnusedLocals": true,                         // Report unused local variables
+    "noUnusedParameters": true,                     // Report unused function parameters
+    "noFallthroughCasesInSwitch": true,             // Report fallthrough cases in switch statements
+    "noUncheckedSideEffectImports": true            // Disallow unchecked side effect imports
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.ts"                                // Include Vite config file
+  ]
 }
